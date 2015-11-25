@@ -10,7 +10,7 @@ First, install [Node.js](http://nodejs.org/). Then, install the latest [Cordova]
 The basic app start for Ionic is well documented [here](http://ionicframework.com/docs/cli/start.html) and by read the Ionic CLI help with `ionic --help`. But this is a good start for me:
 
 ```bash
-$ ionic start -sass ionicPluginsDemo sidemenu
+$ ionic start -sass ionicCordovaPluginsDemo sidemenu
 ```
 
 ### Update Ionic lib
