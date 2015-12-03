@@ -21,3 +21,30 @@ the local static files from Ionic’s CDN.
 ```bash
 $ ionic lib update
 ```
+
+### Setup Ionic with device
+android-sdk could be easily installed with brew, but not android-platform-tools (it is the tricky part).
+```bash
+$ brew install android-sdk
+```
+
+If you run `ionic run android --device` it will make an error like:
+```
+ERROR: Error: Please install Android target: "android-22".
+
+Hint: Open the SDK manager by running: /usr/local/Cellar/android-sdk/24.2/bin/android
+You will require:
+1. "SDK Platform" for android-22
+2. "Android SDK Platform-tools (latest)
+3. "Android SDK Build-tools" (latest)
+```
+
+To solve this you have to install required SDK by selecting them using:
+```bash
+$ android-sdk
+```
+
+Enable the liveReload and the log on the device:
+```bash
+ionic run android --device -l -c
+```
