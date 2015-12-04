@@ -1,0 +1,23 @@
+<ion-view view-title="Transfert large files"
+  hide-back-button="true"
+  can-swipe-back="false">
+  <ion-content has-header>
+    <div class="row">
+      <div class="col">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nesciunt officia nam, minima accusamus at. Obcaecati corporis aspernatur temporibus!</p>
+        <button ng-click="vm.startDownload($event)" class="button button-block button-positive icon-left ion-arrow-down-a">
+          Start downloading large files
+        </button>
+        <p ng-if="vm.downloadProgress">
+          <progress max="100" value="{{vm.downloadProgress}}"></progress>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>nothing here yet...</p>
+        <video ng-if="vm.downloadResult" ng-src="{{vm.downloadResult}}" controls></video>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
