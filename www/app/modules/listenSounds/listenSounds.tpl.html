@@ -1,0 +1,24 @@
+<ion-view view-title="Listen sounds"
+  hide-back-button="true"
+  can-swipe-back="false">
+  <ion-content has-header>
+    <div class="row">
+      <div class="col">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nesciunt officia nam, minima accusamus at. Obcaecati corporis aspernatur temporibus!</p>
+        <button ng-click="vm.playSound($event)" class="button button-block button-positive icon-left" ng-class="{
+          'button-balanced': vm.playing,
+          'ion-play': !vm.playing,
+          'ion-stop': vm.playing
+        }">
+          Listen a sound javascript way
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>Listen a sound with <pre>audio</pre></p>
+        <audio src="{{vm.audioUrl}}" preload="auto" controls></audio>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

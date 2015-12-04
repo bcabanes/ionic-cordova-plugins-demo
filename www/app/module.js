@@ -7,6 +7,7 @@
 
       // App's module.
       'bc-app.coreController',
+      'bc-listenSounds',
       'bc-takePictures',
       'bc-ui'
     ])
