@@ -6,7 +6,9 @@
       <div class="col">
         <videogular vg-player-ready="vm.onPlayerReady($API)" vg-theme="vm.config.theme"
         vg-plays-inline="vm.config.playsInline" vg-native-fullscreen="vm.config.nativeFullscreen"
-        vg-native-controls="vm.config.nativeControls">
+        vg-native-controls="vm.config.nativeControls"
+        vg-clear-media-on-navigate="vm.config.clearMediaOnNavigate"
+        vg-isLive="vm.config.isLive">
     			<vg-media vg-src="vm.config.sources"></vg-media>
           <vg-overlay-play ng-click="vm.toggleFullscreen($event)"><vg-overlay-play>
 
