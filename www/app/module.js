@@ -9,6 +9,7 @@
       'bc-app.coreController',
       'bc-fileTransferts',
       'bc-listenSounds',
+      'bc-socialShares',
       'bc-streamVideos',
       'bc-takePictures',
       'bc-ui'
