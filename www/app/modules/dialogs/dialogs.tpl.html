@@ -1,0 +1,30 @@
+<ion-view view-title="Social shares"
+  hide-back-button="true"
+  can-swipe-back="false">
+  <ion-content overflow-scroll="true">
+    <div class="row">
+      <div class="col">
+        <div class="button-bar">
+          <button ng-click="vm.showAlert($event)" class="button button-block button-assertive">
+            Alert
+          </button>
+          <button ng-click="vm.showConfirm($event)" class="button button-block button-positive">
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="button-bar">
+          <button ng-click="vm.showPrompt($event)" class="button button-block button-stable">
+            Prompt
+          </button>
+          <button ng-click="vm.beep($event)" class="button button-block button-calm">
+            Beep!
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
