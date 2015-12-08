@@ -7,6 +7,7 @@
 
       // App's module.
       'bc-app.coreController',
+      'bc-customPlayers',
       'bc-dialogs',
       'bc-fileTransferts',
       'bc-listenSounds',

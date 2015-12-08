@@ -5,6 +5,11 @@
     "ionic": "driftyco/ionic-bower#1.1.1"
   },
   "dependencies": {
-    "ngCordova": "~0.1.23-alpha"
+    "ngCordova": "~0.1.23-alpha",
+    "videogular": "~1.4.0",
+    "videogular-controls": "~1.4.0",
+    "videogular-buffering": "~1.4.0",
+    "videogular-themes-default": "~1.4.0",
+    "videogular-overlay-play": "~1.4.0"
   }
 }
