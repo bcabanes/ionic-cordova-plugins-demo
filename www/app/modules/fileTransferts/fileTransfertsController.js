@@ -3,25 +3,45 @@
 
   angular
     .module('bc-fileTransferts.coreController', [])
-    .controller('fileTransfertsController', ['$cordovaFileTransfer', '$sce', '$timeout', function($cordovaFileTransfer, $sce, $timeout) {
+    .controller('fileTransfertsController', ['$cordovaFile', '$cordovaFileTransfer', '$sce', '$timeout', function($cordovaFile, $cordovaFileTransfer, $sce, $timeout) {
       var self = this;
       this.downloadProgress = false;
-      this.fileUrl = 'http://www.html5videoplayer.net/videos/toystory.mp4';
+      this.videoUrl = false;
+      this.fileUrl = 'http://benjamincabanes.com/medias/tests/wanderers.mp4';
       // Using cordova File plugin to get the path we want to on the device.
-      this.filePath = cordova.file.dataDirectory + 'myVideo.mp4';
+      this.filePath = cordova.file.externalRootDirectory+'/Downloads/';
+      this.fileName = 'myVideo.mp4';
+      $cordovaFile.getFreeDiskSpace().then(function(result) {
+        self.freeSpace = result;
+      });
 
-      this.startDownload = function() {
+      this.checkFile = function() {
+        $cordovaFile.checkFile(self.filePath, self.fileName)
+        .then(function (result) {
+          self.videoUrl = $sce.trustAsResourceUrl(result.toURL());
+        }, function (error) {
+          self.videoUrl = false;
+          self.downloadProgress = 0;
+        });
+      };
+      this.checkFile();
+
+      this.deleteFile = function() {
+        $cordovaFile.removeFile(this.filePath, this.fileName)
+          .then(this.checkFile);
+      };
+
+      this.startDownload = function(event, customPath) {
         $cordovaFileTransfer
-          .download(this.fileUrl, this.filePath, {}, true)
+          .download(this.fileUrl, this.filePath + this.fileName, {}, true)
           .then(this.downloadSuccessListener, this.downloadErrorListener, this.downloadProgressListener);
       };
 
       this.downloadSuccessListener = function(result) {
-console.log(result, result.toURL());
-        self.downloadResult = $sce.trustAsResourceUrl(result.toURL());
+          self.videoUrl = $sce.trustAsResourceUrl(result.toURL());
       };
       this.downloadErrorListener = function(error) {
-console.log(error);
+console.error(error);
         self.downloadError = error;
       };
       this.downloadProgressListener = function(progress) {

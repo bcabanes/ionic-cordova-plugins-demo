@@ -1,12 +1,12 @@
 <ion-view view-title="Transfert large files"
   hide-back-button="true"
   can-swipe-back="false">
-  <ion-content has-header>
+  <ion-content overflow-scroll="true">
     <div class="row">
       <div class="col">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nesciunt officia nam, minima accusamus at. Obcaecati corporis aspernatur temporibus!</p>
-        <button ng-click="vm.startDownload($event)" class="button button-block button-positive icon-left ion-arrow-down-a">
-          Start downloading large files
+        <p>Testing to download large files into the public storage ({{vm.freeSpace}} Ko):</p>
+        <button ng-if="!vm.videoUrl && !vm.downloadProgress" ng-click="vm.startDownload($event)" class="button button-block button-positive icon-left ion-arrow-down-a">
+          Download
         </button>
         <p ng-if="vm.downloadProgress">
           <progress max="100" value="{{vm.downloadProgress}}"></progress>
@@ -15,8 +15,14 @@
     </div>
     <div class="row">
       <div class="col">
-        <p>nothing here yet...</p>
-        <video ng-if="vm.downloadResult" ng-src="{{vm.downloadResult}}" controls></video>
+        {{vm.downloadError|json}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button ng-if="vm.videoUrl" ng-click="vm.deleteFile($event)" class="button button-block button-assertive">
+          Delete file
+        </button>
       </div>
     </div>
   </ion-content>
