@@ -1,0 +1,38 @@
+<ion-view view-title="Dialogs"
+  hide-back-button="true"
+  can-swipe-back="false">
+  <ion-content overflow-scroll="true">
+    <div class="row">
+      <div class="col">
+        <h4>Long duration</h4>
+        <div class="button-bar">
+          <button ng-click="vm.showToast($event, 'long', 'top')" class="button button-block">
+            Top
+          </button>
+          <button ng-click="vm.showToast($event, 'long', 'center')" class="button button-block">
+            Center
+          </button>
+          <button ng-click="vm.showToast($event, 'long', 'bottom')" class="button button-block">
+            Bottom
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h4>Short duration</h4>
+        <div class="button-bar">
+          <button ng-click="vm.showToast($event, 'short', 'top')" class="button button-block">
+            Top
+          </button>
+          <button ng-click="vm.showToast($event, 'short', 'center')" class="button button-block">
+            Center
+          </button>
+          <button ng-click="vm.showToast($event, 'short', 'bottom')" class="button button-block">
+            Bottom
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

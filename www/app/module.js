@@ -13,6 +13,7 @@
       'bc-listenSounds',
       'bc-socialShares',
       'bc-streamVideos',
+      'bc-toasts',
       'bc-takePictures',
       'bc-ui'
     ])
