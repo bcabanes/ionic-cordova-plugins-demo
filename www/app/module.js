@@ -12,6 +12,7 @@
       'bc-facebookConnect',
       'bc-fileTransferts',
       'bc-listenSounds',
+      'bc-mediaCaptures',
       'bc-oAuths',
       'bc-socialShares',
       'bc-streamVideos',

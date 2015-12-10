@@ -1,0 +1,30 @@
+<ion-view view-title="oAuths"
+  hide-back-button="true"
+  can-swipe-back="false">
+  <ion-content overflow-scroll="true">
+    <div class="row">
+      <div class="col">
+        <video ng-if="vm.videoUrl" ng-src="{{vm.videoUrl}}" autoplay controls width="100%"></video>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button ng-click="vm.captureVideo()" class="button button-block button-positive icon ion-record">
+          Start native recording
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button ng-click="vm.snapshot()" class="button button-block button-stable icon ion-camera">
+          Get a snapshot
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <video id="videoRecord" autoplay height="250px" width="100%"></video>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
