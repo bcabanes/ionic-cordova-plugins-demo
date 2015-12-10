@@ -9,6 +9,7 @@
       'bc-app.coreController',
       'bc-customPlayers',
       'bc-dialogs',
+      'bc-facebookConnect',
       'bc-fileTransferts',
       'bc-listenSounds',
       'bc-socialShares',

@@ -1,0 +1,32 @@
+<ion-view view-title="Facebook connect"
+  hide-back-button="true"
+  can-swipe-back="false">
+  <ion-content overflow-scroll="true">
+    <div class="row">
+      <div class="col">
+        <pre ng-if="vm.userDetails" style="padding: 0.4rem; background: #E9E9E9; border: 1px solid #E1E1E1; border-radius: 3px; font-family: 'monaco';">{{vm.userDetails|json}}</pre>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button ng-if="!vm.userDetails" ng-click="vm.login()" class="button button-block button-positive icon ion-social-facebook">
+          Facebook login
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button ng-if="vm.userDetails" ng-click="vm.showDialog()" class="button button-block button-stable">
+          showDialog
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button ng-if="vm.userDetails" ng-click="vm.logout()" class="button button-block button-assertive icon ion-log-out">
+          Facebook logout
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
