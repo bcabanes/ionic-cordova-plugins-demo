@@ -16,14 +16,22 @@
     </div>
     <div class="row">
       <div class="col">
-        <button ng-click="vm.startRecording()" class="button button-block button-stable icon ion-record">
+        <button ng-if="!vm.isRecordActive" ng-click="vm.startRecording()" class="button button-block button-stable icon ion-record">
           Start JS recording
+        </button>
+        <button ng-if="vm.isRecordActive" ng-click="vm.stopRecording()" class="button button-block button-assertive icon ion-record">
+          Stop JS recording
         </button>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <video id="videoRecord" autoplay height="250px" width="100%"></video>
+        <video id="videoResult" autoplay height="250px" width="100%" controls></video>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <video id="videoRecord" autoplay height="250px" width="100%" controls></video>
       </div>
     </div>
   </ion-content>
