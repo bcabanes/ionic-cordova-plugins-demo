@@ -9,7 +9,7 @@
 			'com.2fdevs.videogular.plugins.controls',
       'com.2fdevs.videogular.plugins.overlayplay'
     ])
-    .controller('customPlayersController', ['$cordovaFile', '$sce', '$timeout', function($cordovaFile, $sce, $timeout) {
+    .controller('customPlayersController', ['$cordovaFile', '$sce', function($cordovaFile, $sce) {
       var self = this;
       this.playerApi = null;
       this.fileUrl = 'http://benjamincabanes.com/medias/tests/wanderers.mp4';

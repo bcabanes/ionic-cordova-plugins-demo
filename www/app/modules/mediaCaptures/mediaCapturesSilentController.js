@@ -2,22 +2,39 @@
   'use strict';
 
   angular
-    .module('bc-mediaCaptures.coreController', [])
-    .controller('mediaCapturesController', ['$cordovaCapture', '$sce', function($cordovaCapture, $sce) {
+    .module('bc-mediaCapturesSilent.coreController', [
+      'ngSanitize',
+			'com.2fdevs.videogular',
+      'com.2fdevs.videogular.plugins.buffering',
+			'com.2fdevs.videogular.plugins.controls',
+      'com.2fdevs.videogular.plugins.overlayplay'
+    ])
+    .controller('mediaCapturesSilentController', ['$sce', function($sce) {
       var self = this;
       var recorder;
 
       this.videoUrl = false;
       this.isRecordActive = false;
 
-      this.captureVideo = function() {
-        var options = { limit: 1, duration: 15 };
+      this.playerApi = null;
+      this.fileUrl = 'http://benjamincabanes.com/medias/tests/wanderers.mp4';
+      this.config = {
+        clearMediaOnNavigate: true,
+        playsInline: false,
+        nativeFullscreen: true,
+        nativeControls: true,
+				sources: [
+					{src: $sce.trustAsResourceUrl(self.fileUrl), type: 'video/mp4'}
+				],
+        theme: 'vendors/videogular-themes-default/videogular.css'
+      };
 
-        $cordovaCapture.captureVideo(options).then(function(videoData) {
-          self.videoUrl = $sce.trustAsResourceUrl(videoData[0].fullPath);
-        }, function(err) {
-          // An error occurred. Show a message to the user
-        });
+      this.updateState = function() {
+console.log('test');
+        if (!self.videoElement.src) {
+          return self.startRecording();
+        }
+        self.stopRecording();
       };
 
       /**
@@ -61,6 +78,15 @@
         recorder.stopRecording(function(videoUrl) {
           self.videoElement.src = videoUrl;
         });
+      };
+
+      this.clearRecordings = function() {
+        var request = indexedDB.webkitGetDatabaseNames();
+        request.onsuccess = function(event) {
+          for (var i = 0; i < Object.keys(event.target.result).length; i++) {
+            indexedDB.deleteDatabase(event.target.result[i]);
+          }
+        };
       };
 
     }]);
