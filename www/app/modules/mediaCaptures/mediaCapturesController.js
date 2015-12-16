@@ -21,47 +21,48 @@ console.log(videoData);
         });
       };
 
-
       /**
        * Don't forget to have the right permission in the AndroidManifest.xml:
        * <uses-permission android:name="android.permission.CAMERA" />
        */
-      this.videoElement = document.getElementById('videoRecord');
+      this.videoElement = document.getElementById('videoResult');
       this.streamRecorder = null;
       this.webcamStream = null;
-      navigator.getUserMedia({video: true, audio: true}, function(stream) {
-        self.videoElement.src = window.URL.createObjectURL(stream);
-        recorder = new RecordRTC(stream, {
-           type: 'video',
-           video: {
-             width: 320,
-             height: 240
-           }
-        });
-      }, function(error) {
-console.log(error);
+
+      RecordRTC.getFromDisk('video', function(dataURL) {
+        if (dataURL) {
+          self.videoElement.src = dataURL;
+        }
       });
 
       this.startRecording = function() {
-        recorder.startRecording();
+        navigator.getUserMedia({video: true, audio: true}, function(stream) {
+          self.videoElement.src = window.URL.createObjectURL(stream);
+          recorder = new RecordRTC(stream, {
+             type: 'video',
+             video: {
+               width: 320,
+               height: 240
+             },
+             frameInterval: 20,
+             autoWriteToDisk: true,
+             bitsPerSecond: 128000
+          });
+
+          recorder.startRecording();
+        }, function(error) {
+  console.log(error);
+        });
+
         this.isRecordActive = true;
       };
 
       this.stopRecording = function() {
         this.isRecordActive = false;
         recorder.stopRecording(function(videoUrl) {
-// console.log(recorder.blob, recorder.buffer);
-          var video = document.getElementById('videoResult');
-          // video.src = window.URL.createObjectURL(recorder.blob);
-          video.src = videoUrl;
+          self.videoElement.src = videoUrl;
         });
-        // recorder.writeToDisk();
       };
-
-//       RecordRTC.getFromDisk('video', function(dataURL) {
-// console.log(dataURL);
-//         self.videoElement.src = dataURL;
-//       });
 
     }]);
 })(angular);
