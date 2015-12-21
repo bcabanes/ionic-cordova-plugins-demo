@@ -11,6 +11,7 @@
       'bc-dialogs',
       'bc-facebookConnect',
       'bc-fileTransferts',
+      'bc-googleConnect',
       'bc-listenSounds',
       'bc-mediaCaptures',
       'bc-oAuths',
