@@ -5,6 +5,10 @@
       'ionic',
       'ngCordova',
 
+      // Ionic services.
+      'ionic.service.core',
+      'ionic.service.analytics',
+
       // App's module.
       'bc-app.coreController',
       'bc-customPlayers',
