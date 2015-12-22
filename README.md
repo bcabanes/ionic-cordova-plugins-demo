@@ -1,5 +1,5 @@
 # ionic-cordova-plugins-demo
-Some demos of multiple cordova/ionic plugins.
+Some demos of multiple cordova/ionic plugins using the [Crosswlak project](https://crosswalk-project.org/) as default WebView.
 
 ## Set up
 ### Install ionic
