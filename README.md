@@ -25,7 +25,7 @@ $ ionic lib update
 ### Setup Ionic with device
 
 #### Android
-To run & debug your application easily on Android devices, you have to have install the Android SDK. The `android-sdk` could be easily installed with brew, but not android-platform-tools (which is the tricky part).
+To run & debug your application easily on Android devices, you have to install the Android SDK. The `android-sdk` package could be easily installed with brew, but not `android-platform-tools` (which is the tricky part).
 
 First make sure you have your brew list updated, then install the `android-sdk` package.
 
@@ -65,9 +65,9 @@ Enable the liveReload and the log on the device ([Ionic CLI options](https://git
 ionic run android --device -l -c
 ```
 
-##### Troubleshooting
+## Troubleshooting
 
-###### Facebook SDK & Google SDK
+### Facebook SDK & Google SDK
 You may encounter some error if you use the `cordova-plugin-googleplus` ([github](https://github.com/EddyVerbruggen/cordova-plugin-googleplus)) and `phonegap-facebook-plugin` ([github](https://github.com/Wizcorp/phonegap-facebook-plugin)) at the same time. You can have an error like this:
 
 ```
