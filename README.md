@@ -1,6 +1,12 @@
 # ionic-cordova-plugins-demo
 Some demos of multiple cordova/ionic plugins using the [Crosswlak project](https://crosswalk-project.org/) as default WebView.
 
+## Useful links
+Ionic provide great documentation for each side of the project:
+* [SDK](http://ionicframework.com/docs/)
+* [ng-cordova](http://ngcordova.com/)
+* [Platform Documentation](http://docs.ionic.io/)
+
 ## Set up
 ### Install ionic
 First, install [Node.js](http://nodejs.org/). Then, install the latest [Cordova](https://cordova.apache.org/) and [Ionic command-line tools](https://npmjs.org/package/ionic). Follow the [Android](http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html) and [iOS](http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html) platform guides to install required platform dependencies.
