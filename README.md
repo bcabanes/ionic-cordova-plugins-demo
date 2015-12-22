@@ -23,7 +23,16 @@ $ ionic lib update
 ```
 
 ### Setup Ionic with device
-android-sdk could be easily installed with brew, but not android-platform-tools (it is the tricky part).
+
+#### Android
+To run & debug your application easily on Android devices, you have to have install the Android SDK. The `android-sdk` could be easily installed with brew, but not android-platform-tools (which is the tricky part).
+
+First make sure you have your brew list updated, then install the `android-sdk` package.
+
+```bash
+$ brew update
+```
+
 ```bash
 $ brew install android-sdk
 ```
@@ -41,10 +50,43 @@ You will require:
 
 To solve this you have to install required SDK by selecting them using:
 ```bash
-$ android-sdk
+$ android
 ```
 
-Enable the liveReload and the log on the device:
+If you have planed to use Google services (G+/Oauth/Google Play), you have to install these packages:
+* Android Support Repository
+* Android Support Library
+* Google Play services
+* Google Repository
+* Google Play APK Expansion Library
+
+Enable the liveReload and the log on the device ([Ionic CLI options](https://github.com/driftyco/ionic-cli#live-reload-app-during-development-beta)):
 ```bash
 ionic run android --device -l -c
 ```
+
+##### Troubleshooting
+
+###### Facebook SDK & Google SDK
+You may encounter some error if you use the `cordova-plugin-googleplus` ([github](https://github.com/EddyVerbruggen/cordova-plugin-googleplus)) and `phonegap-facebook-plugin` ([github](https://github.com/Wizcorp/phonegap-facebook-plugin)) at the same time. You can have an error like this:
+
+```
+FAILURE: Build failed with an exception.
+* What went wrong:
+Execution failed for task ':dexDebug'...
+[...]
+UNEXPECTED TOP-LEVEL EXCEPTION:
+  	com.android.dex.DexException: Multiple dex files define ...
+```
+
+To solve this issue you can add the following lines to the `build.gradle` file located in `platforms/android`:
+```java
+configurations {
+   all*.exclude group: 'com.android.support', module: 'support-v4'
+}
+```
+
+ After the line:
+ ```java
+ apply plugin: 'android'
+ ``
