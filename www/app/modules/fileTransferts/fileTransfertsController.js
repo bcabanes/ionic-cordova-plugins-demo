@@ -3,7 +3,7 @@
 
   angular
     .module('bc-fileTransferts.coreController', [])
-    .controller('fileTransfertsController', ['$cordovaFile', '$cordovaFileTransfer', '$sce', '$timeout', function($cordovaFile, $cordovaFileTransfer, $sce, $timeout) {
+    .controller('fileTransfertsController', ['$cordovaFile', '$cordovaFileTransfer', '$cordovaNetwork', '$sce', '$timeout', function($cordovaFile, $cordovaFileTransfer, $cordovaNetwork, $sce, $timeout) {
       var self = this;
       this.downloadProgress = false;
       this.videoUrl = false;
@@ -32,6 +32,10 @@
       };
 
       this.startDownload = function(event, customPath) {
+        if ($cordovaNetwork.getNetwork() !== 'wifi') {
+          alert("It is recommanded to be in wifi to donwload such file.");
+          return false;
+        }
         $cordovaFileTransfer
           .download(this.fileUrl, this.filePath + this.fileName, {}, true)
           .then(this.downloadSuccessListener, this.downloadErrorListener, this.downloadProgressListener);
@@ -47,5 +51,6 @@ console.error(error);
       this.downloadProgressListener = function(progress) {
         self.downloadProgress = (progress.loaded / progress.total) * 100;
       };
+
     }]);
 })(angular);
