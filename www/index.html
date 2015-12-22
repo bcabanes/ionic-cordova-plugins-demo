@@ -13,6 +13,7 @@
 
     <!-- ionic/angularjs js -->
     <script src="vendors/ionic/js/ionic.bundle.js"></script>
+    <script src="vendors/ionic-platform-web-client/dist/ionic.io.bundle.js"></script>
     <script src="vendors/ngCordova/dist/ng-cordova.js"></script>
 
     <script src="vendors/angular-sanitize/angular-sanitize.js"></script>
@@ -22,7 +23,8 @@
     <script src="vendors/videogular-overlay-play/vg-overlay-play.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
+    <!-- Cordova is bootstrapped by ionic-platform-web-client, uncomment this if you remove ionic-platform-web-client... -->
+    <!-- <script src="cordova.js"></script> -->
 
     <script src="app/bootstrap.js"></script>
     <script src="app/module.js"></script>

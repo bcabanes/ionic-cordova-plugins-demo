@@ -30,7 +30,10 @@
           controller: 'uiMainMenuController as vm'
         });
 
-      // if none of the above states are matched, use this as the fallback
+      // If none of the above states are matched, use this as the fallback.
       $urlRouterProvider.otherwise('/app/takePictures');
+
+      // Initialize Ionic services.
+      var io = Ionic.io();
     }]);
 })(angular);

@@ -1,6 +1,6 @@
 {
-  "name": true,
-  "app_id": "",
+  "name": "ionicCordovaPluginsDemo",
+  "app_id": "576888f3",
   "gulpStartupTasks": [
     "sass",
     "watch"
