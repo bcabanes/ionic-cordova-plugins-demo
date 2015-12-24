@@ -6,8 +6,9 @@
       'ngCordova',
 
       // Ionic services.
-      'ionic.service.core',
       'ionic.service.analytics',
+      'ionic.service.core',
+      'ionic.service.push',
 
       // App's module.
       'bc-app.coreController',

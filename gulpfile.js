@@ -20,12 +20,13 @@ gulp.task('ioconfig', function () {
     var src = config.libclientionic + 'ionic.io.bundle*.js';
     var ioconfig = fs.readFileSync(".io-config.json", "utf8").slice(0, -1);
     var start = '"IONIC_SETTINGS_STRING_START";var settings =';
-    var end =  '}; return { get: function(setting) { if (settings[setting]) { return settings[setting]; } return null; } };"IONIC_SETTINGS_STRING_END"';
+    var end =  '; return { get: function(setting) { if (settings[setting]) { return settings[setting]; } return null; };"IONIC_SETTINGS_STRING_END"';
     var replaceBy = start + ioconfig + end;
     console.log('inject .io-config in ionic.io.bundle.js');
+console.log(replaceBy);
     gulp.src(src)
-    .pipe(replace(/"IONIC_SETTINGS_STRING_START.*IONIC_SETTINGS_STRING_END"/, replaceBy))
-    .pipe(gulp.dest(config.libclientionic));
+      .pipe(replace(/"IONIC_SETTINGS_STRING_START.*IONIC_SETTINGS_STRING_END"/, replaceBy))
+      .pipe(gulp.dest(config.libclientionic));
 });
 
 gulp.task('default', ['sass']);
