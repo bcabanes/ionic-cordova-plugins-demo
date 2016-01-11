@@ -11,7 +11,7 @@
           allowEdit: true,
           encodingType: Camera.EncodingType.JPEG,
           targetWidth: 500,
-          targetHeight: 500,
+          targetHeight: 1500,
           popoverOptions: CameraPopoverOptions,
           saveToPhotoAlbum: false,
           correctOrientation: false
