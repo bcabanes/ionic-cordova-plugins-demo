@@ -1,0 +1,17 @@
+<ion-view view-title="In app purchase"
+          hide-back-button="true"
+          can-swipe-back="false">
+  <ion-content overflow-scroll="true">
+    <div class="row">
+      <div class="col">
+        <h4>Product Available</h4>
+        <pre>{{vm.product|json}}</pre>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button ng-click="vm.purchase(vm.product.id)" ng-disabled="!vm.product.canPurchase" class="button button-large button-positive">Purchase</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

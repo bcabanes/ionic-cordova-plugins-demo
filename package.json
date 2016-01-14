@@ -54,6 +54,13 @@
         "APP_ID": "1120000861352726",
         "APP_NAME": "com.ionicframework.ionicpluginsdemo556710"
       }
+    },
+    {
+      "variables": {
+        "BILLING_KEY": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhsOIs1mkhvgFKhBTjR4S/EnQX+GqEuq3bfgforROwOaJKKX79P4aymcj4ALQkhrbc+yCEIlb6y/UVuwiW8r1+rHFz4GZaa3NuUJe2rVrdHYvX/pvSNlx8EoIGUBMUJEgf08jPesAR+crcFRiLaxec8FV+G0luyH9Bl8aoFoWWaAFAlOgmHbBpRFnV4xOTLJ0I0tEQyje4LjRRAsKAENugKfINvfV6O/MGSGXNU1hD1TunIek+GV9DES/cSMZ4+Bkr+Cy1vlw0KSDqUB2eM0+4y0rLw02EhXKPxHOu7pYRoJ/F4rsYJYhPm6NDCeRFu1mltjEiSes3o3X8cY3E/JfIwIDAQAB"
+      },
+      "locator": "cc.fovea.cordova.purchase",
+      "id": "cc.fovea.cordova.purchase"
     }
   ],
   "cordovaPlatforms": [

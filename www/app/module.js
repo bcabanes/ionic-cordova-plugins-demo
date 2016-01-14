@@ -17,6 +17,7 @@
       'bc-facebookConnect',
       'bc-fileTransferts',
       'bc-googleConnect',
+      'bc-inAppPurchase',
       'bc-listenSounds',
       'bc-mediaCaptures',
       'bc-oAuths',
