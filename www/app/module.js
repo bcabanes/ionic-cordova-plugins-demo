@@ -16,6 +16,7 @@
       'bc-dialogs',
       'bc-facebookConnect',
       'bc-fileTransferts',
+      'bc-googleAnalytics',
       'bc-googleConnect',
       'bc-inAppPurchase',
       'bc-listenSounds',
