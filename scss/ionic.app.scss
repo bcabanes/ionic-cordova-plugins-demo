@@ -20,3 +20,41 @@ $ionicons-font-path: "../vendors/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/vendors/ionic/scss/ionic";
+
+
+
+// Custom dialog, native like.
+.popup-container .popup {
+  background: #F8F8F8;
+  border-radius: 13px;
+  overflow: hidden;
+}
+  .popup-head { border-bottom: none; }
+    .popup-title {
+      margin-top: 12px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+    .popup-body {
+      padding-bottom: 20px;
+      text-align: center;
+    }
+    .popup-buttons {
+      padding: 0;
+      min-height: 0;
+    }
+      .popup-buttons button.button,
+      .popup-buttons button.button:hover,
+      .popup-buttons button.button.activated {
+        margin: 0;
+        padding: 2px 6px 3px;
+        box-shadow: none;
+        background: none;
+        border: none;
+        border-top: 1px solid #C8C7CC;
+        color: #387EF5;
+        font-size: 17px;
+        font-weight: bold;
+        min-height: 44px;
+        text-transform: capitalize;
+      }

@@ -3,7 +3,7 @@
 
   angular
     .module('bc-dialogs.coreController', [])
-    .controller('dialogsController', ['$cordovaDialogs', function($cordovaDialogs) {
+    .controller('dialogsController', ['$cordovaDialogs', '$ionicPopup', function($cordovaDialogs, $ionicPopup) {
       var self = this;
 
       this.showAlert = function() {
@@ -33,6 +33,14 @@
       this.beep = function() {
         // beep 3 times
         $cordovaDialogs.beep(3);
+      };
+
+      // Ionic popup.
+      this.showAlert = function() {
+        var alertPopup = $ionicPopup.alert({
+          title: 'New Friend!',
+          template: 'Your friend, Obi wan Kenobi, just accepted your friend request!'
+        });
       };
 
     }]);
