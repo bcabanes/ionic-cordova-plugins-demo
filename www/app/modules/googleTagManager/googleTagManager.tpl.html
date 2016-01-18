@@ -1,0 +1,20 @@
+<ion-view view-title="Google tag manager"
+          hide-back-button="true"
+          can-swipe-back="false">
+  <ion-content overflow-scroll="true">
+    <div class="row">
+      <div class="col">
+        <h3>Some analytic events</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="button-bar">
+          <button ng-click="vm.sendEvent('button-first')" class="button">First</button>
+          <button ng-click="vm.sendEvent('button-second')" class="button">Second</button>
+          <button ng-click="vm.sendEvent('button-third')" class="button">Third</button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

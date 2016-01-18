@@ -18,6 +18,7 @@
       'bc-fileTransferts',
       'bc-googleAnalytics',
       'bc-googleConnect',
+      'bc-googleTagManager',
       'bc-inAppPurchase',
       'bc-listenSounds',
       'bc-mediaCaptures',

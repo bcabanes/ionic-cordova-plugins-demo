@@ -62,7 +62,7 @@
       "locator": "cc.fovea.cordova.purchase",
       "id": "cc.fovea.cordova.purchase"
     },
-    "cordova-plugin-google-analytics"
+    "com.jareddickson.cordova.tag-manager"
   ],
   "cordovaPlatforms": [
     "android",
