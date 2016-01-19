@@ -19,6 +19,7 @@ exports.config = {
     deviceName: 'device',
     browserName: '',
     autoWebview: true,
+    autoWebviewTimeout: 10000,
     app: '/Users/ben/Documents/projects/ionicCordovaPluginsDemo/ionic.apk'
   },
 
