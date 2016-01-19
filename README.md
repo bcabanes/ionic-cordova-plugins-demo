@@ -74,6 +74,32 @@ Enable the liveReload and the log on the device ([Ionic CLI options](https://git
 ionic run android --device -l -c
 ```
 
+### Plugins list
+
+This is the list of all plugins used in the project:
+* cordova-plugin-device [[github](https://github.com/apache/cordova-plugin-device)]
+* cordova-plugin-console [[github](https://github.com/apache/cordova-plugin-console)]
+* cordova-plugin-whitelist [[github](https://github.com/apache/cordova-plugin-whitelist)]
+* cordova-plugin-splashscreen [[github](https://github.com/apache/cordova-plugin-splashscreen)]
+* cordova-plugin-statusbar [[github](https://github.com/apache/cordova-plugin-statusbar)]
+* ionic-plugin-keyboard [[github](https://github.com/driftyco/ionic-plugin-keyboard)]
+* cordova-plugin-camera [[github](https://github.com/apache/cordova-plugin-camera)]
+* cordova-plugin-file-transfer [[github](https://github.com/apache/cordova-plugin-file-transfer)]
+* cordova-plugin-file [[github](https://github.com/apache/cordova-plugin-file)]
+* com.hutchind.cordova.plugins.streamingmedia [[github](https://github.com/nchutchind/Streaming-Media-Cordova-Plugin)]
+* cordova-plugin-x-socialsharing [[github](https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)]
+* cordova-plugin-dialogs [[github](https://github.com/apache/cordova-plugin-dialogs)]
+* cordova-plugin-x-toast [[github](https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin)]
+* cordova-plugin-inappbrowser [[github](https://github.com/apache/cordova-plugin-inappbrowser)]
+* cordova-plugin-media-capture [[github](https://github.com/apache/cordova-plugin-media-capture)]
+* cordova-plugin-crosswalk-webview [[github](https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview)]
+* cordova-plugin-googleplus [[github](https://github.com/EddyVerbruggen/cordova-plugin-googleplus)]
+* cordova-plugin-network-information [[github](https://github.com/apache/cordova-plugin-network-information)]
+* phonegap-plugin-push [[github](https://github.com/phonegap/phonegap-plugin-push)]
+* cordova-plugin-facebook4 [[github](https://github.com/jeduan/cordova-plugin-facebook4)]
+* com.jareddickson.cordova.tag-manager [[github](https://github.com/kraihn/cordova-plugin-tag-manager)]
+* cc.fovea.cordova.purchase [[github](https://github.com/j3k0/cordova-plugin-purchase)]
+
 ## Troubleshooting
 
 ### Facebook SDK
