@@ -44,6 +44,7 @@ $ brew install android-sdk
 ```
 
 If you run `ionic run android --device` it will make an error like:
+
 ```
 ERROR: Error: Please install Android target: "android-22".
 
@@ -55,6 +56,7 @@ You will require:
 ```
 
 To solve this you have to install required SDK by selecting them using:
+
 ```bash
 $ android
 ```
@@ -67,32 +69,13 @@ If you have planed to use Google services (G+/Oauth/Google Play), you have to in
 * Google Play APK Expansion Library
 
 Enable the liveReload and the log on the device ([Ionic CLI options](https://github.com/driftyco/ionic-cli#live-reload-app-during-development-beta)):
+
 ```bash
 ionic run android --device -l -c
 ```
 
 ## Troubleshooting
 
-### Facebook SDK & Google SDK
-You may encounter some error if you use the `cordova-plugin-googleplus` ([github](https://github.com/EddyVerbruggen/cordova-plugin-googleplus)) and `phonegap-facebook-plugin` ([github](https://github.com/Wizcorp/phonegap-facebook-plugin)) at the same time. You can have an error like this:
-
-```
-FAILURE: Build failed with an exception.
-* What went wrong:
-Execution failed for task ':dexDebug'...
-[...]
-UNEXPECTED TOP-LEVEL EXCEPTION:
-  	com.android.dex.DexException: Multiple dex files define ...
-```
-
-To solve this issue you can add the following lines to the `build.gradle` file located in `platforms/android`:
-```java
-configurations {
-   all*.exclude group: 'com.android.support', module: 'support-v4'
-}
-```
-
- After the line:
- ```java
- apply plugin: 'android'
- ```
+### Facebook SDK
+To avoid some probleme using the Facebook SDK, try to always verify the SDK version, in sort of always use the last version. The `phonegap-facebook-plugin` from Wizcorp don't use (currently) the last Facebook SDK version.
+Instead, `cordova-plugin-facebook4` from [Jeduan](https://github.com/jeduan/cordova-plugin-facebook4) is a fork of the Wizcorp plugin with the latest SDK version.
