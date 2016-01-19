@@ -151,7 +151,7 @@ There is multiple ways of doing automation tests:
 > [Appium](http://appium.io/) is an open source test automation framework for use with native, hybrid and mobile web apps. 
 It drives iOS and Android apps using the WebDriver protocol.
 
-We use Protractor to lunch and config Appium for testing purpose, so make sure you have these installed:
+We use [Protractor](https://angular.github.io/protractor/#/) to lunch and config Appium for testing purpose, so make sure you have these installed:
 
 ```bash
 $ npm install -g protractor appium
