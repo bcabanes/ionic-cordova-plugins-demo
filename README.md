@@ -77,5 +77,5 @@ ionic run android --device -l -c
 ## Troubleshooting
 
 ### Facebook SDK
-To avoid some probleme using the Facebook SDK, try to always verify the SDK version, in sort of always use the last version. The `phonegap-facebook-plugin` from Wizcorp don't use (currently) the last Facebook SDK version.
+To avoid some problems using the Facebook SDK, try to always verify the SDK version, in sort of always use the last version. The `phonegap-facebook-plugin` from Wizcorp don't use (currently) the last Facebook SDK version.
 Instead, `cordova-plugin-facebook4` from [Jeduan](https://github.com/jeduan/cordova-plugin-facebook4) is a fork of the Wizcorp plugin with the latest SDK version.
